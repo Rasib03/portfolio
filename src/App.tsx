@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // Import BrowserRouter and Routes
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Routes, Route } from 'react-router-dom';
 import {
     Main,
     Expertise,
