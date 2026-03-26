@@ -1,0 +1,151 @@
+/* src/assets/styles/ProjectDetail.scss */
+
+.detail-container {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 80vh;
+
+    /* Dark theme (default) */
+    color: #ffffff;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+
+    .detail-content {
+        h3 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    .action-buttons {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px;
+
+        .btn {
+            padding: 12px 24px;
+            background-color: #5000ca;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #3f00a0;
+            }
+        }
+    }
+}
+
+/* ====================== LIGHT THEME SUPPORT ====================== */
+.light .detail-container,
+.light .detail-container * {
+    color: #1a1a1a !important;
+    /* Sab text black ho jayega light theme mein */
+}
+
+.light .detail-container .btn {
+    background-color: #6e1fff;
+    color: white;
+}
+
+.light .detail-container .btn:hover {
+    background-color: #5000ca;
+}
+
+/* ====================== IMAGE STYLES ====================== */
+
+.detail-hero-img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 16px;
+    margin: 1.5rem auto;
+    display: block;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.gallery-img:hover {
+    transform: scale(1.04);
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+
+    .gallery-img {
+        max-width: 240px;
+    }
+
+    .detail-hero-img {
+        max-width: 340px;
+    }
+}
+
+/* ====================== TECH STACK BUBBLES ====================== */
+.stack-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+.stack-badge {
+    background: linear-gradient(135deg, #5000ca, #6e1fff);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(80, 0, 202, 0.25);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.stack-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(80, 0, 202, 0.35);
+}
+
+/* Light theme mein bhi ache se dikhein */
+.light .stack-badge {
+    background: linear-gradient(135deg, #6e1fff, #9b5eff);
+    color: white;
+}
+
+/* Project list page ke liye (already tha) */
+.project img.zoom {
+    width: 280px !important;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
