@@ -44,18 +44,21 @@
 }
 
 /* ====================== LIGHT THEME SUPPORT ====================== */
-.light .detail-container,
-.light .detail-container * {
-    color: #1a1a1a !important;
-    /* Sab text black ho jayega light theme mein */
+.light-mode .detail-container {
+    color: #1a1a1a;
 }
 
-.light .detail-container .btn {
+.light-mode .detail-container ul,
+.light-mode .detail-container ul li {
+    color: inherit;
+}
+
+.light-mode .detail-container .btn {
     background-color: #6e1fff;
     color: white;
 }
 
-.light .detail-container .btn:hover {
+.light-mode .detail-container .btn:hover {
     background-color: #5000ca;
 }
 
@@ -136,7 +139,7 @@
 }
 
 /* Light theme mein bhi ache se dikhein */
-.light .stack-badge {
+.light-mode .stack-badge {
     background: linear-gradient(135deg, #6e1fff, #9b5eff);
     color: white;
 }

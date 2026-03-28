@@ -4,6 +4,15 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import tagIcon from './assets/images/tag.png';
+
+const favicon = document.querySelector<HTMLLinkElement>("link[rel='icon']");
+if (favicon) {
+  favicon.href = tagIcon;
+  favicon.type = 'image/png';
+  favicon.setAttribute('sizes', '128x128');
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -13,7 +22,4 @@ root.render(
   </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
