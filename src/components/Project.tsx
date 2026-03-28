@@ -1,5 +1,5 @@
-import fittrack_mock from '../assets/images/fittrack_mock.png';
-import telenor_mock from '../assets/images/telenor_mock.png';   // ← New import
+import fittrack_mock from '../assets/images/fittrack_mock.webp';
+import telenor_mock from '../assets/images/telenor_mock.webp';   // ← New import
 
 import '../assets/styles/Project.scss';
 import { Link } from "react-router-dom";

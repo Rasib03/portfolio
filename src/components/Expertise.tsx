@@ -1,7 +1,7 @@
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
-import flutter from '../assets/images/flutter.png';
-import ML from '../assets/images/ML.png';
+import flutter from '../assets/images/flutter.webp';
+import ML from '../assets/images/ML.webp';
 import softwareEngineering from "../assets/images/softwareEngineering.png";
 
 const labelsFirst = [
