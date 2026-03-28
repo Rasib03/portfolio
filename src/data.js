@@ -4,9 +4,9 @@ export const projectsData = [
         title: "FitTrack+",
         description: "Built from the ground up with Flutter, FitTrack+ delivers buttery-smooth performance, stunning visuals, and lightning-fast syncing across Android. The clean, modern interface feels premium yet simple enough for anyone to master in minutes.",
         image: [
-            "../public/assets/images/ft1.webp",
-            "../public/assets/images/ft2.webp",
-            "../public/assets/images/ft3.webp"
+            "/assets/images/ft1.webp",
+            "/assets/images/ft2.webp",
+            "/assets/images/ft3.webp"
         ],
         features: ["📊 BMI Monitoring", "🎯 Daily Targets & Activity Status", "🥤🍎 Water & Calorie Intake Tracking", "😴 Sleep Tracking", "🏃‍♂️ Workout Progress & Latest Workouts", "🍽️ Meal Planning & Scheduling"],
         github: "https://github.com/RASIB20/health_tracker",
@@ -24,10 +24,10 @@ export const projectsData = [
             "/assets/images/mt3.webp",
             "/assets/images/mt4.webp",
             "/assets/images/mt5.webp",
-            "/assets/images/mt6.webp",
-            "/assets/images/mt7.webp",
-            "/assets/images/mt8.webp",
-            "/assets/images/mt9.webp",
+            "/assets/images/mt6.png",
+            "/assets/images/mt7.png",
+            "/assets/images/mt8.png",
+            "/assets/images/mt9.png",
         ],
         features: [
             "🔐 Firebase Authentication",
