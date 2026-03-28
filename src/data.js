@@ -1,15 +1,15 @@
-import ft1 from '../src/assets/images/ft1.webp';
-import ft2 from '../src/assets/images/ft2.webp';
-import ft3 from '../src/assets/images/ft3.webp';
-import mt1 from '../src/assets/images/mt1.webp';
-import mt2 from '../src/assets/images/mt2.webp';
-import mt3 from '../src/assets/images/mt3.webp';
-import mt4 from '../src/assets/images/mt4.webp';
-import mt5 from '../src/assets/images/mt5.webp';
-import mt6 from '../src/assets/images/mt6.png';
-import mt7 from '../src/assets/images/mt7.png';
-import mt8 from '../src/assets/images/mt8.png';
-import mt9 from '../src/assets/images/mt9.png';
+import ft1 from './assets/images/ft1.webp';
+import ft2 from './assets/images/ft2.webp';
+import ft3 from './assets/images/ft3.webp';
+import mt1 from './assets/images/mt1.webp';
+import mt2 from './assets/images/mt2.webp';
+import mt3 from './assets/images/mt3.webp';
+import mt4 from './assets/images/mt4.webp';
+import mt5 from './assets/images/mt5.webp';
+import mt6 from './assets/images/mt6.png';
+import mt7 from './assets/images/mt7.png';
+import mt8 from './assets/images/mt8.png';
+import mt9 from './assets/images/mt9.png';
 
 export const projectsData = [
     {
