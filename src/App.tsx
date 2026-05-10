@@ -7,9 +7,11 @@ import {
     Contact,
     Navigation,
     Footer,
+    Timeline,
 } from "./components";
-import ProjectDetail from './components/ProjectDetail'; // Path to your new detail page
+import ProjectDetail from './components/ProjectDetail';
 import FadeIn from './components/FadeIn';
+import ScrollToTop from './components/ScrollToTop';
 import './index.scss';
 
 function App() {
@@ -24,8 +26,6 @@ function App() {
     }, []);
 
     return (
-
-        // REMOVED <Router> FROM HERE
         <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
             <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
 
@@ -35,6 +35,7 @@ function App() {
                         <Main />
                         <Expertise />
                         <Project />
+                        <Timeline />
                         <Contact />
                     </FadeIn>
                 } />
@@ -44,8 +45,8 @@ function App() {
             </Routes>
 
             <Footer />
+            <ScrollToTop />
         </div>
-        // REMOVED </Router> FROM HERE
     );
 
 }

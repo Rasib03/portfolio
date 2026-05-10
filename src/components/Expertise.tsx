@@ -2,10 +2,12 @@ import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 import flutter from '../assets/images/flutter.webp';
 import ML from '../assets/images/ML.webp';
-import softwareEngineering from "../assets/images/softwareEngineering.png";
+import softwareEngineering from "../assets/images/softwareEngineering.webp";
 
 const labelsFirst = [
     "Flutter",
+    "React Native",
+    "Kotlin",
     "Dart",
     "BLoC",
     "Provider",
@@ -42,7 +44,11 @@ function Expertise() {
     return (
         <div className="container" id="expertise">
             <div className="skills-container">
-                <h1>Expertise</h1>
+                <span className="section-label">01 — Expertise</span>
+                <h1>What I Do</h1>
+                <p className="section-subtitle">
+                    Technologies and disciplines I work with day-to-day.
+                </p>
                 <div className="skills-grid">
                     <div className="skill">
                         <img
@@ -50,8 +56,8 @@ function Expertise() {
                             alt="Flutter"
                             className="skill-icon"     // ← yeh class banao CSS mein
                         />
-                        <h3>Mobile App Development (Flutter & Dart)</h3>
-                        <p>I specialize in building high-performance, multi-threaded cross-platform mobile applications using Flutter, with expertise in BLoC state management, Supabase & Firebase backend integration, and RestAPI's connectivity.</p>
+                        <h3>Mobile App Development (Flutter, React Native & Kotlin)</h3>
+                        <p>I specialize in building high-performance, cross-platform mobile applications using Flutter and React Native, with native Android experience in Kotlin. Expertise in BLoC state management, Supabase & Firebase backend integration, and REST API connectivity.</p>
                         <div className="flex-chips">
                             <span className="chip-title">Tech stack:</span>
                             {labelsFirst.map((label, index) => (

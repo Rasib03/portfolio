@@ -4,12 +4,12 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import tagIcon from './assets/images/tag.png';
+import tagIcon from './assets/images/tag.webp';
 
 const favicon = document.querySelector<HTMLLinkElement>("link[rel='icon']");
 if (favicon) {
   favicon.href = tagIcon;
-  favicon.type = 'image/png';
+  favicon.type = 'image/webp';
   favicon.setAttribute('sizes', '128x128');
 }
 

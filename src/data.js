@@ -24,10 +24,10 @@ export const projectsData = [
             "/assets/images/mt3.webp",
             "/assets/images/mt4.webp",
             "/assets/images/mt5.webp",
-            "/assets/images/mt6.png",
-            "/assets/images/mt7.png",
-            "/assets/images/mt8.png",
-            "/assets/images/mt9.png",
+            "/assets/images/mt6.webp",
+            "/assets/images/mt7.webp",
+            "/assets/images/mt8.webp",
+            "/assets/images/mt9.webp",
         ],
         features: [
             "🔐 Firebase Authentication",
@@ -41,6 +41,28 @@ export const projectsData = [
         github: "https://github.com/Rasib03/MyTelenorClone",
         apk: "/downloads/mytelenor.apk",
         stack: ["Flutter", "Firebase", "Stripe", "FCM", "Dart"]
+    }
+    ,
+    {
+        id: "graphoinsights",
+        title: "GraphoInsights",
+        description: "GraphoInsights is a professional Flutter application built as a Final Year Project for graphologists — specialists who analyze handwriting to uncover psychological traits and personality patterns. The app provides a complete client management system with real-time data sync, secure per-user authentication, and a clean, intuitive interface designed for professional use. Built on Clean Architecture principles, it separates concerns across data, domain, and presentation layers — making it highly scalable, testable, and maintainable. Every feature, from composite-indexed Firestore queries to BLoC-driven state management, was engineered for real-world performance.",
+        image: [
+            "/assets/images/home_fyp.webp",
+            "/assets/images/second_fyp.webp",
+        ],
+        features: [
+            "👤 Client Management — Full CRUD with real-time updates",
+            "🖋️ Handwriting-based Psychological Trait Analysis",
+            "☁️ Real-time Sync with Firebase & Supabase",
+            "🔐 Secure Authentication with user-specific data isolation",
+            "⚡ Optimized Firestore queries with Composite Indexing",
+            "🏗️ Clean Architecture — Data, Domain & Presentation layers",
+            "📊 Structured psychological reports per client",
+        ],
+        github: "https://github.com/Rasib03/graphoInsights",
+        apk: "/downloads/graphoinsights.apk",
+        stack: ["Flutter", "Dart", "Firebase", "Supabase", "BLoC", "Clean Architecture"]
     }
 
 

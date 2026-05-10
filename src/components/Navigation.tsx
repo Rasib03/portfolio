@@ -15,6 +15,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = [['Expertise', 'expertise'], ['Projects', 'projects'], ['Contact', 'contact']];
@@ -47,13 +48,9 @@ function Navigation({ parentToChild, modeChange }: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section)
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
-    } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -76,7 +73,7 @@ function Navigation({ parentToChild, modeChange }: any) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
+      <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`} elevation={0}>
         <Toolbar className='navigation-bar'>
           <IconButton
             color="inherit"
@@ -87,17 +84,29 @@ function Navigation({ parentToChild, modeChange }: any) {
           >
             <MenuIcon />
           </IconButton>
-          {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()} />
-          ) : (
-            <DarkModeIcon onClick={() => modeChange()} />
-          )}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
-                {item[0]}
-              </Button>
-            ))}
+
+          {/* Brand / Logo */}
+          <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+            <Link to="/" className="nav-brand" style={{ textDecoration: 'none' }}>
+              <span className="nav-brand-text" style={{ color: mode === 'dark' ? '#f1f5f9' : '#0f172a' }}>
+                MR<span className="nav-brand-dot">.</span>
+              </span>
+            </Link>
+          </Box>
+
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 0.5 }}>
+              {navItems.map((item) => (
+                <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: mode === 'dark' ? '#e2e8f0' : '#0f172a' }}>
+                  {item[0]}
+                </Button>
+              ))}
+            </Box>
+            {mode === 'dark' ? (
+              <LightModeIcon onClick={() => modeChange()} titleAccess="Switch to light mode" sx={{ ml: 1 }} />
+            ) : (
+              <DarkModeIcon onClick={() => modeChange()} titleAccess="Switch to dark mode" sx={{ ml: 1 }} />
+            )}
           </Box>
         </Toolbar>
       </AppBar>
@@ -107,7 +116,7 @@ function Navigation({ parentToChild, modeChange }: any) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },

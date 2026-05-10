@@ -1,38 +1,152 @@
-.vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
+/* ===== TIMELINE SECTION ===== */
+
+#history {
+    .items-container {
+        padding: 100px 10% 80px;
+
+        >h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, #c4b5fd 60%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 56px;
+        }
+    }
 }
 
-.vertical-timeline p {
-    color: rgb(39, 40, 34);
+/* ===== VERTICAL TIMELINE LINE ===== */
+.vertical-timeline::before {
+    background: linear-gradient(180deg,
+            #7c3aed 0%,
+            #a78bfa 50%,
+            rgba(124, 58, 237, 0.15) 100%);
+    width: 3px !important;
 }
 
-.vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+/* ===== TIMELINE CARD ===== */
+.vertical-timeline-element-content {
+    border-radius: 20px !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25) !important;
+    border: 1px solid rgba(124, 58, 237, 0.14) !important;
+    background: linear-gradient(160deg, #0d1525, #111827) !important;
+    transition: all 0.35s ease !important;
+
+    &:hover {
+        border-color: rgba(124, 58, 237, 0.35) !important;
+        box-shadow: 0 16px 48px rgba(124, 58, 237, 0.18) !important;
+        transform: translateY(-4px);
+    }
 }
 
+/* ===== TIMELINE ICON ===== */
+.vertical-timeline-element-icon {
+    background: linear-gradient(135deg, #7c3aed, #a78bfa) !important;
+    box-shadow:
+        0 0 0 4px rgba(124, 58, 237, 0.25),
+        0 8px 24px rgba(124, 58, 237, 0.35) !important;
+}
+
+/* ===== DATE ===== */
+.vertical-timeline span,
+.vertical-timeline-element .vertical-timeline-element-date {
+    color: #a78bfa !important;
+    font-family: 'Fira Code', monospace !important;
+    font-size: 0.82rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.04em;
+}
+
+/* ===== CARD TEXT ===== */
 .vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
+    color: #e2e8f0 !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    margin-bottom: 4px;
 }
 
 .vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+    color: #7c3aed !important;
+    font-family: 'Fira Code', monospace !important;
+    font-size: 0.82rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
 }
 
-.vertical-timeline-element span {
-    color: rgb(39, 40, 34);
-}
-
-.vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+.vertical-timeline-element p,
+.vertical-timeline p {
+    color: #64748b !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.875rem !important;
+    line-height: 1.7 !important;
 }
 
 .svg-inline--fa {
     color: white;
+    font-size: 0.9rem;
 }
 
+/* ===== LIGHT MODE ===== */
+.light-mode #history .items-container>h1 {
+    background: linear-gradient(135deg, #0f172a 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.light-mode .vertical-timeline::before {
+    background: linear-gradient(180deg,
+            rgba(124, 58, 237, 0.5) 0%,
+            rgba(124, 58, 237, 0.15) 100%);
+}
+
+.light-mode .vertical-timeline-element-content {
+    background: #ffffff !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07) !important;
+    border-color: rgba(124, 58, 237, 0.1) !important;
+
+    &:hover {
+        border-color: rgba(124, 58, 237, 0.28) !important;
+        box-shadow: 0 16px 48px rgba(124, 58, 237, 0.1) !important;
+    }
+}
+
+.light-mode .vertical-timeline-element-content-arrow {
+    border-right: 7px solid rgba(124, 58, 237, 0.06) !important;
+}
+
+.light-mode .vertical-timeline-element h3 {
+    color: #0f172a !important;
+}
+
+.light-mode .vertical-timeline-element p,
+.light-mode .vertical-timeline p {
+    color: #475569 !important;
+}
+
+.light-mode .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+    color: #7c3aed !important;
+}
+
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 1170px) {
     .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
+        color: #a78bfa !important;
+        padding-top: 8px;
+        font-size: 0.78rem !important;
+    }
+
+    .light-mode .vertical-timeline-element .vertical-timeline-element-date {
+        color: #7c3aed !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #history .items-container {
+        padding: 70px 5% 60px;
     }
 }
