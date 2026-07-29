@@ -12,6 +12,7 @@ import {
 import ProjectDetail from './components/ProjectDetail';
 import FadeIn from './components/FadeIn';
 import ScrollToTop from './components/ScrollToTop';
+import { trackVisitor } from './utils/trackVisitor';
 // @ts-ignore: SCSS module type declarations are not available in this project setup
 import './index.scss';
 
@@ -24,6 +25,10 @@ function App() {
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, []);
+
+    useEffect(() => {
+        trackVisitor();
     }, []);
 
     return (
