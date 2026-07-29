@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projectsData } from '../data';
 import '../assets/styles/ProjectDetail.scss';
-import { resolveAssetUrl } from '../utils/resolveAssetUrl';
 
 function ProjectDetail() {
     const { projectId } = useParams();
@@ -30,7 +29,7 @@ function ProjectDetail() {
             {project.heroImage && (
                 <img
                     className="detail-hero-img"
-                    src={resolveAssetUrl(project.heroImage)}
+                    src={project.heroImage}
                     alt={`${project.title} hero banner`}
                     loading="lazy"
                 />
@@ -71,7 +70,7 @@ function ProjectDetail() {
                     <div className="feature-banner-wrap">
                         <img
                             className="feature-banner"
-                            src={resolveAssetUrl(project.featureImage)}
+                            src={project.featureImage}
                             alt={`${project.title} feature showcase banner`}
                             loading="lazy"
                         />
@@ -83,7 +82,7 @@ function ProjectDetail() {
                     {galleryImages.map((img, index) => (
                         <img
                             key={index}
-                            src={resolveAssetUrl(img)}
+                            src={img}
                             alt={`${project.title} screenshot ${index + 1}`}
                             className="gallery-img"
                             loading="lazy"
