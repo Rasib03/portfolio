@@ -6,15 +6,15 @@ import softwareEngineering from "../assets/images/softwareEngineering.webp";
 
 const labelsFirst = [
     "Flutter",
-    "React Native",
-    "Kotlin",
     "Dart",
     "BLoC",
+    "Getx",
     "Provider",
     "Supabase",
     "Firebase",
     "REST APIs",
-    "Hive",
+    "SQL",
+    "NoSQL",
 ];
 
 const labelsSecond = [
@@ -54,6 +54,7 @@ function Expertise() {
                         <img
                             src={flutter}
                             alt="Flutter"
+                            loading="lazy"
                             className="skill-icon"     // ← yeh class banao CSS mein
                         />
                         <h3>Mobile App Development (Flutter, React Native & Kotlin)</h3>
@@ -70,6 +71,7 @@ function Expertise() {
                         <img
                             src={ML}
                             alt="ML"
+                            loading="lazy"
                             className="skill-icon2"     // ← yeh class banao CSS mein
                         />
                         <h3>Machine Learning & Computer Vision</h3>
@@ -86,6 +88,7 @@ function Expertise() {
                         <img
                             src={softwareEngineering}
                             alt="softwareEngineering"
+                            loading="lazy"
                             className="skill-icon3"     // ← yeh class banao CSS mein
                         />
                         <h3>Software Engineering & Theoretical Foundations</h3>

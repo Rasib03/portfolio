@@ -12,6 +12,7 @@ import {
 import ProjectDetail from './components/ProjectDetail';
 import FadeIn from './components/FadeIn';
 import ScrollToTop from './components/ScrollToTop';
+// @ts-ignore: SCSS module type declarations are not available in this project setup
 import './index.scss';
 
 function App() {

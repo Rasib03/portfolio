@@ -17,17 +17,34 @@ function ProjectDetail() {
         );
     }
 
-    const images = Array.isArray(project.image) ? project.image : [project.image];
+    const galleryImages = project.galleryImages || (Array.isArray(project.image) ? project.image : [project.image]);
 
     return (
         <div className="detail-container">
             <Link to="/" className="back-link">← Back to Portfolio</Link>
 
-
             <h1>{project.title}</h1>
+            {project.tagline && <p className="project-tagline">{project.tagline}</p>}
+
+            {project.heroImage && (
+                <img
+                    className="detail-hero-img"
+                    src={project.heroImage}
+                    alt={`${project.title} hero banner`}
+                    loading="lazy"
+                />
+            )}
 
             <div className="detail-content">
                 <p>{project.description}</p>
+
+                {project.tags && project.tags.length > 0 && (
+                    <div className="project-tags">
+                        {project.tags.map((tag, index) => (
+                            <span key={index} className="project-tag-pill">{tag}</span>
+                        ))}
+                    </div>
+                )}
 
                 <h3>Key Features:</h3>
                 <ul>
@@ -36,7 +53,6 @@ function ProjectDetail() {
                     ))}
                 </ul>
 
-                {/* ====================== TECH STACK BUBBLES ====================== */}
                 {project.stack && project.stack.length > 0 && (
                     <>
                         <h3>Tech Stack</h3>
@@ -50,15 +66,26 @@ function ProjectDetail() {
                     </>
                 )}
 
-                {/* ====================== ALL IMAGES GALLERY ====================== */}
+                {project.featureImage && (
+                    <div className="feature-banner-wrap">
+                        <img
+                            className="feature-banner"
+                            src={project.featureImage}
+                            alt={`${project.title} feature showcase banner`}
+                            loading="lazy"
+                        />
+                    </div>
+                )}
+
                 <h3>Project Screenshots</h3>
-                <div className="image-gallery">
-                    {images.map((img, index) => (
+                <div className="image-gallery grid-gallery">
+                    {galleryImages.map((img, index) => (
                         <img
                             key={index}
                             src={img}
                             alt={`${project.title} screenshot ${index + 1}`}
                             className="gallery-img"
+                            loading="lazy"
                         />
                     ))}
                 </div>

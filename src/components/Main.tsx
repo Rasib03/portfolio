@@ -49,7 +49,7 @@ function Main() {
         <div className="orb-bottom" aria-hidden="true"></div>
         <div className="image-wrapper">
           <div className="avatar-ring">
-            <img src={profilePic} alt="Muhammad Rasib" />
+            <img src={profilePic} alt="Muhammad Rasib" loading="lazy" />
           </div>
         </div>
 
